@@ -11,14 +11,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.stehschnitzel.shutter.ShutterMain;
 import net.stehschnitzel.shutter.block.GoldShutter;
-import net.stehschnitzel.shutter.block.LeadShutter;
 import net.stehschnitzel.shutter.block.Shutter;
-import net.stehschnitzel.shutter.block.SilverShutter;
 
 public class BlockInit {
 
     public static final Block GLASS_SHUTTER = registerBlock("glass_shutter",
-            new Shutter(FabricBlockSettings.copyOf(Blocks.GLASS)));
+            new Shutter(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
 
     // Additional Fabric Block Registries
     public static final Block AZALEA_SHUTTER = registerBlock("azalea_shutter",
@@ -33,8 +31,8 @@ public class BlockInit {
     public static final Block WALNUT_SHUTTER = registerBlock("walnut_shutter",
             new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
-    public static final Block POISE_SHUTTER = registerBlock("poise_shutter",
-            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
+//    public static final Block POISE_SHUTTER = registerBlock("poise_shutter",
+//            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
     public static final Block ACACIA_SHUTTER = registerBlock("acacia_shutter",
             new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
@@ -73,8 +71,8 @@ public class BlockInit {
             new Shutter(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
 
     // Outer End Blocks
-    public static final Block AZURE_SHUTTER = registerBlock("azure_shutter",
-            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
+//    public static final Block AZURE_SHUTTER = registerBlock("azure_shutter",
+//            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
     // Quark Blocks
     public static final Block BLOSSOM_SHUTTER = registerBlock("blossom_shutter",
@@ -90,11 +88,11 @@ public class BlockInit {
     public static final Block NETHERITE_SHUTTER = registerBlock("netherite_shutter",
             new Shutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR).strength(5.0F)));
 
-    public static final Block LEAD_SHUTTER = registerBlock("lead_shutter",
-            new LeadShutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
-
-    public static final Block SILVER_SHUTTER = registerBlock("silver_shutter",
-            new SilverShutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
+//    public static final Block LEAD_SHUTTER = registerBlock("lead_shutter",
+//            new LeadShutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
+//
+//    public static final Block SILVER_SHUTTER = registerBlock("silver_shutter",
+//            new SilverShutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
 
     // Twigs Blocks
     public static final Block STRIPPED_BAMBOO_SHUTTER = registerBlock("stripped_bamboo_shutter",
@@ -119,11 +117,11 @@ public class BlockInit {
             new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
     // Update Aquatic Blocks
-    public static final Block DRIFTWOOD_SHUTTER = registerBlock("driftwood_shutter",
-            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
-
-    public static final Block RIVER_SHUTTER = registerBlock("river_shutter",
-            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
+//    public static final Block DRIFTWOOD_SHUTTER = registerBlock("driftwood_shutter",
+//            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
+//
+//    public static final Block RIVER_SHUTTER = registerBlock("river_shutter",
+//            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
 
     private static Block registerBlock(String name, Block block) {

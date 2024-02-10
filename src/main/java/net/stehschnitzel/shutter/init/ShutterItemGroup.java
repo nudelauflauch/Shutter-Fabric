@@ -53,7 +53,7 @@ public class ShutterItemGroup {
         if (FabricLoader.getInstance().isModLoaded("environmental")) {
             registerEnvironmental(items);
         }
-        if (FabricLoader.getInstance().isModLoaded("snowy_spirit")) {
+        if (FabricLoader.getInstance().isModLoaded("snowyspirit")) {
             registerSnowySpirit(items);
         }
         if (FabricLoader.getInstance().isModLoaded("upgrade_aquatic")) {
@@ -102,11 +102,11 @@ public class ShutterItemGroup {
     }
 
     private static void registerEndergetic(ItemGroup.Entries items) {
-        items.add(BlockInit.POISE_SHUTTER);
+//        items.add(BlockInit.POISE_SHUTTER);
     }
 
     private static void registerOuterEnd(ItemGroup.Entries items) {
-        items.add(BlockInit.AZURE_SHUTTER);
+//        items.add(BlockInit.AZURE_SHUTTER);
     }
 
     private static void registerQuark(ItemGroup.Entries items) {
@@ -124,8 +124,8 @@ public class ShutterItemGroup {
     }
 
     private static void registerOreganized(ItemGroup.Entries items) {
-        items.add(BlockInit.SILVER_SHUTTER);
-        items.add(BlockInit.LEAD_SHUTTER);
+//        items.add(BlockInit.SILVER_SHUTTER);
+//        items.add(BlockInit.LEAD_SHUTTER);
     }
 
     private static void registerAutumnity(ItemGroup.Entries items) {
@@ -143,8 +143,8 @@ public class ShutterItemGroup {
     }
 
     private static void registerUpdateAquatic(ItemGroup.Entries items) {
-        items.add(BlockInit.DRIFTWOOD_SHUTTER);
-        items.add(BlockInit.RIVER_SHUTTER);
+//        items.add(BlockInit.DRIFTWOOD_SHUTTER);
+//        items.add(BlockInit.RIVER_SHUTTER);
     }
 
 
