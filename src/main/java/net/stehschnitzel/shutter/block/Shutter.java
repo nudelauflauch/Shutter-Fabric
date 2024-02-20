@@ -65,8 +65,8 @@ public class Shutter extends AbstractShutter {
         List<BlockState> sideblocks = getNeighborBlocks(world, pos);
 
         if (state.get(DOUBLE_DOOR) == ShutterDouble.NONE) {
-            BlockPos right = getNeighborShutterPos(world, pos, ShutterDouble.RIGHT);
-            BlockPos left = getNeighborShutterPos(world, pos, ShutterDouble.LEFT);
+            BlockPos right = getNeighborShutterPos(pos, ShutterDouble.RIGHT, state.get(FACING));
+            BlockPos left = getNeighborShutterPos(pos, ShutterDouble.LEFT, state.get(FACING));
 
 
             if (sideblocks.get(0).getBlock() instanceof Shutter && pos.equals(getNeighborShutterPos(world, right))) {
@@ -94,14 +94,13 @@ public class Shutter extends AbstractShutter {
         }
 
         // resets the shutter to 0 when i cant be in state 2
-        if (!((World) world).isClient && state.get(OPEN) == 2
-                && !canUpdate(world, pos)) {
+        if (state.get(OPEN) == 2 && !canUpdate(world, pos)) {
             this.update((World) world, pos, 0, false);
             this.playSound((World) world, pos, world.getBlockState(pos).get(OPEN));
         }
 
         //update position
-        if (pos.up().equals(neighborPos) || pos.up().equals(neighborPos)) {
+        if (pos.up().equals(neighborPos) || pos.down().equals(neighborPos)) {
             updatePosNeighborHelper(world, pos);
         }
         return state;
@@ -146,9 +145,9 @@ public class Shutter extends AbstractShutter {
 
 
         if (neighbor_has_signal) {
-            open_state = isdoubleDoor == ShutterDouble.NONE ? this.stateTwoPossible(level, blockpos, true, isdoubleDoor == ShutterDouble.NONE) ? 2 : 1 : this.stateTwoPossibleDouble (level, blockpos, true) ? 2 : 1;
+            open_state = isdoubleDoor == ShutterDouble.NONE ? this.stateTwoPossible(level, blockpos, true, true) ? 2 : 1 : this.stateTwoPossibleDouble(level, blockpos, true, isdoubleDoor, direction) ? 2 : 1;
 
-            updateRedstone(level, blockpos, true, isdoubleDoor);
+            updateRedstone(level, blockpos, true, isdoubleDoor, direction);
         }
 
         return this.getDefaultState()
