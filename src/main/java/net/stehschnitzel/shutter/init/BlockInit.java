@@ -81,6 +81,10 @@ public class BlockInit {
     public static final Block ANCIENT_SHUTTER = registerBlock("ancient_shutter",
             new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
+    public static final Block AZALEA_QUARK_SHUTTER = registerBlock(
+            "azalea_quark_shutter", new Shutter(
+                    FabricBlockSettings.copy(Blocks.ACACIA_WOOD)));
+
     // Supplementaries Blocks
     public static final Block GOLD_SHUTTER = registerBlock("gold_shutter",
             new GoldShutter(FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
@@ -123,6 +127,15 @@ public class BlockInit {
 //    public static final Block RIVER_SHUTTER = registerBlock("river_shutter",
 //            new Shutter(FabricBlockSettings.copyOf(Blocks.ACACIA_DOOR)));
 
+
+    //goodending
+    public static final Block CYPRESS_SHUTTER = registerBlock(
+            "cypress_shutter", new Shutter(
+                    FabricBlockSettings.copy(Blocks.ACACIA_WOOD)));
+
+    public static final Block MUDDY_OAK_SHUTTER = registerBlock(
+            "muddy_oak_shutter", new Shutter(
+                    FabricBlockSettings.copy(Blocks.ACACIA_WOOD)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

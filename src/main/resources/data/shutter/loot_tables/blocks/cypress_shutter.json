@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "shutter:azalea_quark_shutter"
+          "name": "shutter:cypress_shutter"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "shutter:blocks/azalea_quark_shutter"
+  "random_sequence": "shutter:blocks/cypress_shutter"
 }

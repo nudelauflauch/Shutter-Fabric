@@ -44,9 +44,6 @@ public class ShutterItemGroup {
         if (FabricLoader.getInstance().isModLoaded("twigs")) {
              registerTwigs(items);
         }
-        if (FabricLoader.getInstance().isModLoaded("oreganized")) {
-            registerOreganized(items);
-        }
         if (FabricLoader.getInstance().isModLoaded("autumnity")) {
             registerAutumnity(items);
         }
@@ -58,6 +55,9 @@ public class ShutterItemGroup {
         }
         if (FabricLoader.getInstance().isModLoaded("upgrade_aquatic")) {
             registerUpdateAquatic(items);
+        }
+        if (FabricLoader.getInstance().isModLoaded("goodending")) {
+            registerGoodEnding(items);
         }
         if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
             registerCreate(items);
@@ -72,6 +72,7 @@ public class ShutterItemGroup {
             registerEnvironmental(items);
             registerSnowySpirit(items);
             registerUpdateAquatic(items);
+            registerGoodEnding(items);
         }
     }
 
@@ -88,10 +89,13 @@ public class ShutterItemGroup {
         items.add(BlockInit.MANGROVE_SHUTTER);
         items.add(BlockInit.BAMBOO_SHUTTER);
         items.add(BlockInit.CHERRY_SHUTTER);
+
+        items.add(new ItemStack(BlockInit.GOLD_SHUTTER));
+        items.add(new ItemStack(BlockInit.NETHERITE_SHUTTER));
+        items.add(new ItemStack(BlockInit.GLASS_SHUTTER));
     }
 
     private static void registerCreate(ItemGroup.Entries items) {
-        items.add(BlockInit.GLASS_SHUTTER);
     }
 
     private static void registerEcologics(ItemGroup.Entries items) {
@@ -111,16 +115,18 @@ public class ShutterItemGroup {
 
     private static void registerQuark(ItemGroup.Entries items) {
         items.add(BlockInit.ANCIENT_SHUTTER);
+        items.add(BlockInit.AZALEA_QUARK_SHUTTER);
         items.add(BlockInit.BLOSSOM_SHUTTER);
+
     }
 
     private static void registerSupplementaries(ItemGroup.Entries items) {
-        items.add(BlockInit.GOLD_SHUTTER);
-        items.add(BlockInit.NETHERITE_SHUTTER);
+//        items.add(BlockInit.GOLD_SHUTTER);
+//        items.add(BlockInit.NETHERITE_SHUTTER);
     }
 
     private static void registerTwigs(ItemGroup.Entries items) {
-        items.add(BlockInit.STRIPPED_BAMBOO_SHUTTER);
+        //items.add(BlockInit.STRIPPED_BAMBOO_SHUTTER);
     }
 
     private static void registerOreganized(ItemGroup.Entries items) {
@@ -145,6 +151,11 @@ public class ShutterItemGroup {
     private static void registerUpdateAquatic(ItemGroup.Entries items) {
 //        items.add(BlockInit.DRIFTWOOD_SHUTTER);
 //        items.add(BlockInit.RIVER_SHUTTER);
+    }
+
+    private static void registerGoodEnding(ItemGroup.Entries items) {
+        items.add(BlockInit.CYPRESS_SHUTTER);
+        items.add(BlockInit.MUDDY_OAK_SHUTTER);
     }
 
 
